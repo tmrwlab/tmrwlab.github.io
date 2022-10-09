@@ -1398,7 +1398,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Owl, new cjs.Rectangle(-501.9,-491.4,682.0999999999999,955.7), null);
+}).prototype = getMCSymbolPrototype(lib.Owl, new cjs.Rectangle(-501.9,-491.4,682,955.7), null);
 
 
 (lib.Monster = function(mode,startPosition,loop) {
@@ -1461,7 +1461,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		this.logo.cursor = "pointer";
 		
 		this.logo.on("click", function(){
-				window.open("http://www.tdg.ac.jp/dept/graphic/", "_blank");
+				window.open("https://tmrwlab.github.io/", "_blank");
 		});
 	}
 
@@ -4317,10 +4317,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/bg.png?1549523450154", id:"bg"},
-		{src:"images/bg_2.png?1549523450154", id:"bg_2"},
-		{src:"images/cta_click_here0311.png?1549523450154", id:"cta_click_here0311"},
-		{src:"sounds/KnightRiderMainTheme1.mp3?1549523450154", id:"KnightRiderMainTheme1"}
+		{src:"images/bg.png", id:"bg"},
+		{src:"images/bg_2.png", id:"bg_2"},
+		{src:"images/cta_click_here0311.png", id:"cta_click_here0311"},
+		{src:"sounds/KnightRiderMainTheme1.mp3", id:"KnightRiderMainTheme1"}
 	],
 	preloads: []
 };
