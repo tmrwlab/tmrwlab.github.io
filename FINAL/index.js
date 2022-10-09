@@ -1451,7 +1451,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		this.logo.cursor = "pointer";
 		
 		this.logo.on("click", function(){
-				window.open("http://www.tdg.ac.jp/dept/graphic/", "_blank");
+				window.open("https://tmrwlab.github.io/", "_blank");
 		});
 	}
 	this.frame_204 = function() {
@@ -4187,7 +4187,7 @@ p.nominalBounds = new cjs.Rectangle(-111.3,-328.5,1158,1408.5);
 
 
 // stage content:
-(lib.RECOVER_index = function(mode,startPosition,loop) {
+(lib.index = function(mode,startPosition,loop) {
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
