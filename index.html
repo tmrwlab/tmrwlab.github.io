@@ -1,1 +1,349 @@
-<h1>Hello</h1>
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>＋＋ＤＩＡＮＥ　ＣＨＥＮ＋＋</title>
+	
+	<script type="text/javascript" src="../20181101/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../20181101/jquery.easing.1.3.js"></script>
+	<script src="../20181101/scrollAnimate.js"></script>
+	
+	<link rel="stylesheet" href="../20181101/colorbox.css" />
+	<script src="../20181101/jquery.colorbox.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+		
+		$(".group1").colorbox({rel:'group1',maxHeight:'100%',maxHeight:'100%'});
+		
+		function isHankaku(str){
+			str = (str==null)?"":str;
+			if(str.match(/^[\x20-\x7e]*$/)){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		$("#submit").click(function(e) {
+			var str = "";
+            if($("#subject").val()==""){
+				str += "何の用じゃ？\n"
+			}
+			if($("#name").val()==""){
+				str += "あなたのお名前なんてーの？\n"
+			}
+			if($("#mail").val()==""){
+				str += "メアド書かんかい？\n"
+			}else{
+				if(!isHankaku($("#mail").val())){
+					//全角
+					str += "メアドに、ぜんかくぅ～？\n"
+				}else{
+					//半角で
+					if($("#mail").val().indexOf('@')<=0 || $("#mail").val().indexOf('@')>=$("#mail").val().length-1){
+						//@が最初か最後
+						str += "メアドが変じゃね？\n"
+					}
+				}
+			}
+			if($("#message").val()==""){
+				str += "何か話あるんじゃないの？\n"
+			}
+			if(str!=""){
+				alert(str)
+				return false;
+			}
+        });
+	});
+</script>
+	
+<script>
+		//alert("ダイアンです！") 
+		//alert("Hello"+"World!")
+	</script>
+	
+	
+<style type="text/css">
+/** {
+	border: 1px solid #FF0004;
+	
+}*/
+body, h1, h2 {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	color: hsla(0,0%,100%,1.00);
+}
+body {
+	background-color: hsla(0,0%,100%,1.00);
+	background-attachment: fixed;
+	-webkit-box-shadow: inset 0px 0px;
+	box-shadow: inset 0px 0px;
+	background-image: -webkit-linear-gradient(40deg,rgba(0,0,0,0.59) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(0,0,0,0.52) 85.71%), url(../20181101/images/bg00.jpg);
+	background-image: -moz-linear-gradient(40deg,rgba(0,0,0,0.59) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(0,0,0,0.52) 85.71%), url(../20181101/images/bg00.jpg);
+	background-image: -o-linear-gradient(40deg,rgba(0,0,0,0.59) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(0,0,0,0.52) 85.71%), url(../20181101/images/bg00.jpg);
+	background-image: linear-gradient(50deg,rgba(0,0,0,0.59) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(0,0,0,0.52) 85.71%), url(../20181101/images/bg00.jpg);
+	background-repeat: repeat;
+}
+nav {
+	position: fixed;
+	background-color: hsla(0,0%,82%,0.50);
+	width: 100%;
+	height: 50px;
+}
+nav a {
+	width: 20%;
+	text-align: center;
+	padding-bottom: 10px;
+	text-decoration: none;
+	display: inline-block;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-top: 14px;
+	-webkit-transition: all 0.5s ease-in-out 0s;
+	-o-transition: all 0.5s ease-in-out 0s;
+	transition: all 0.5s ease-in-out 0s;
+}
+nav a:link {
+	color: hsla(0,0%,0%,1);
+}
+nav a:visited {
+	color: hsla(0,0%,0%,1);
+}
+nav a:hover {
+	color: hsla(0,0%,100%,1);
+	background-color: hsla(0,0%,0%,1.00)
+}
+nav a:active {
+	background-color: hsla(0,3%,14%,1);
+}
+.container {
+	width: 960px;
+    margin-left: auto;
+	margin-right: auto;
+}
+header  {
+	background-color: #FFFFFF;
+	height: 35vw;
+	color: #FFFFFF;
+	padding-top: 50px;
+	background-image: url(../20181101/images/header.png) , -webkit-linear-gradient(70deg,rgba(255,255,255,0.85) 35.65%,rgba(82,82,82,1.00) 85.58%);
+	background-image: url(../20181101/images/header.png) , -moz-linear-gradient(70deg,rgba(255,255,255,0.85) 35.65%,rgba(82,82,82,1.00) 85.58%);
+	background-image: url(../20181101/images/header.png) , -o-linear-gradient(70deg,rgba(255,255,255,0.85) 35.65%,rgba(82,82,82,1.00) 85.58%);
+	background-image: url(../20181101/images/header.png) , linear-gradient(20deg,rgba(255,255,255,0.85) 35.65%,rgba(82,82,82,1.00) 85.58%);
+	background-repeat: no-repeat;
+	background-position: left 0px;
+	background-attachment: fixed;
+	background-size: 100% auto;
+}
+footer  {
+	background-color: #000000;
+	text-align: center;
+	color: hsla(0,0%,100%,1.00);
+	font-size: 10pt;
+}
+article {
+	padding-top: 60px;
+	padding-bottom: 0px;
+	min-height: 100vh;
+	padding-left: 15px;
+}
+#profile {
+	background-image: -webkit-linear-gradient(40deg,rgba(0,0,0,1.00) 0%,rgba(0,0,0,1.00) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(0,0,0,1.00) 85.58%), url(../20181101/images/bg03.png);
+	background-image: -moz-linear-gradient(40deg,rgba(0,0,0,1.00) 0%,rgba(0,0,0,1.00) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(0,0,0,1.00) 85.58%), url(../20181101/images/bg03.png);
+	background-image: -o-linear-gradient(40deg,rgba(0,0,0,1.00) 0%,rgba(0,0,0,1.00) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(0,0,0,1.00) 85.58%), url(../20181101/images/bg03.png);
+	background-image: linear-gradient(50deg,rgba(0,0,0,1.00) 0%,rgba(0,0,0,1.00) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(0,0,0,1.00) 85.58%), url(../20181101/images/bg03.png);
+	background-attachment: fixed;
+}
+#works {
+	background-attachment: fixed;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-image: -webkit-linear-gradient(40deg,rgba(0,0,0,0.90) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(255,255,255,0.50) 85.46%), url(../20181101/images/bg02.png);
+	background-image: -moz-linear-gradient(40deg,rgba(0,0,0,0.90) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(255,255,255,0.50) 85.46%), url(../20181101/images/bg02.png);
+	background-image: -o-linear-gradient(40deg,rgba(0,0,0,0.90) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(255,255,255,0.50) 85.46%), url(../20181101/images/bg02.png);
+	background-image: linear-gradient(50deg,rgba(0,0,0,0.90) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(255,255,255,0.50) 85.46%), url(../20181101/images/bg02.png);
+}
+#photos {
+	background-image: -webkit-linear-gradient(40deg,rgba(108,108,108,0.67) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(255,255,255,0.37) 85.58%), url(../20181101/images/bg03.png);
+	background-image: -moz-linear-gradient(40deg,rgba(108,108,108,0.67) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(255,255,255,0.37) 85.58%), url(../20181101/images/bg03.png);
+	background-image: -o-linear-gradient(40deg,rgba(108,108,108,0.67) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(255,255,255,0.37) 85.58%), url(../20181101/images/bg03.png);
+	background-image: linear-gradient(50deg,rgba(108,108,108,0.67) 16.44%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(255,255,255,0.37) 85.58%), url(../20181101/images/bg03.png);
+	background-attachment: fixed;
+}
+#contact {
+	background-image: -webkit-linear-gradient(40deg,rgba(0,0,0,0.50) 16.30%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(0,0,0,1.00) 85.58%), url(../20181101/images/bg04.png);
+	background-image: -moz-linear-gradient(40deg,rgba(0,0,0,0.50) 16.30%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(0,0,0,1.00) 85.58%), url(../20181101/images/bg04.png);
+	background-image: -o-linear-gradient(40deg,rgba(0,0,0,0.50) 16.30%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(0,0,0,1.00) 85.58%), url(../20181101/images/bg04.png);
+	background-image: linear-gradient(50deg,rgba(0,0,0,0.50) 16.30%,rgba(152,45,255,0.85) 32.16%,rgba(255,42,237,0.88) 54.08%,rgba(14,250,206,0.75) 73.86%,rgba(0,0,0,1.00) 85.58%), url(../20181101/images/bg04.png);
+	background-attachment: fixed;
+}
+h1 {
+	font-size: 8vw;
+	text-shadow: 5px 5px 10px hsla(0,0%,0%,1.00);
+	padding-top: 6vw;
+	text-align: center;
+}
+	
+form{text-align:left;width:100%;margin:0;padding:0;}
+textarea {
+	width:50%;
+	min-height: 200px;
+	box-sizing:border-box;
+}
+#subject, #name , #mail {
+	width: calc(50% - 12em);
+}
+#mail {
+	ime-mode:disabled;
+}
+input,label {
+	box-sizing:border-box;
+}
+label {
+	width:  8em;
+	display: inline-block;
+}
+.btns{text-align:left;}
+.btns input{margin-left:0.5em;margin-right:0.5em;}
+	
+	
+#content {
+	margin-top: 20px;
+}
+#avatar {
+	margin-right: 10px;
+}
+	
+/* Gray Scale */
+.color img{
+filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+-webkit-transition: all 1s ease;
+}
+
+.color img:hover{
+filter: grayscale(0%);
+filter: gray;
+-webkit-filter: grayscale(0%);
+filter: none;
+transition: 1s ease;
+}
+	
+.shrink img {
+transition: 1s ease;
+}
+
+.shrink img:hover{
+-webkit-transform: scale(0.8);
+-ms-transform: scale(0.8);
+transform: scale(0.8);
+transition: 1s ease;
+}
+	
+	/* Resume */
+	 h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
+	h2 span {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-style: italic;
+	font-family: Georgia, Serif;
+	font-size: 16px;
+	color: #FFFFFF;
+	font-weight: normal;
+	margin-right: 50px;
+}
+	.clear { clear: both; }
+dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
+        dd { width: 600px; float: left; }
+        dd.clear { float: none; margin: 0; height: 15px; }
+	
+#profile div .email {
+	color: hsla(0,0%,100%,1.00);
+}
+
+	.box{
+	width: 150px;
+	height: 150px;
+
+	}
+	#box1  {	
+	background-color: aqua
+}
+	#box2  {	
+	background-color:antiquewhite
+}
+	#box3  {	
+	background-color: aquamarine
+}
+</style>
+	
+</head>
+
+<body>
+<nav> <a href="#">トップ</a><a href="#profile">自己介紹</a><a href="#works">作品介紹</a><a href="#photos">寫真</a><a href="#contact">コンタク</a></nav>
+	
+<header>
+  <h1 class="container">ＤＩＡＮＥ</br>
+	ＣＨＥＮ
+	
+  </h1>
+	</header>
+	
+<article id="profile">
+  <h2>自己介紹</h2>	
+  <div  class="container" id="box1">
+	
+	
+	
+	</div>
+</article>
+	
+<article id="works" class="container">
+  <h2>作品介紹</h2>	
+  <div id="content" class="shrink"> 
+    
+	  	<a id="avatar" class="group1" href="../20181101/images/w_04.png" title="ROCK FESTIVAL POSTER"><img src="../20181101/images/w_04.png" width="181" height="250" alt=""/></a> 
+	  
+		<a id="avatar" class="group1" href="../20181101/images/w_01.png" title="EXHIBITION FLYER"><img src="../20181101/images/w_01.png" width="180" height="250" alt=""/></a>
+	  
+	    <a id="avatar" class="group1" href="../20181101/images/w_02.png" title="TDG BROCHURE"><img src="../20181101/images/w_02.png" width="180" height="250" alt=""/></a>
+	  
+	
+  </div>
+</article>
+
+	
+<article id="photos" class="container">
+  <h2>寫真</h2>	
+  <div  id="content" class="color"> 
+	  
+	  	  	<a id="avatar" class="group1"  href="../20181101/images/p_01.png" title="ZAFIRA"><img src="../20181101/images/p_01.png" alt="" width="250" height="250" class="color"/ ></a> 
+	  <a id="avatar" class="group1" href="../20181101/images/p_02.png" title="CAT KYOTO"><img src="../20181101/images/p_02.png" width="250" height="250" alt=""/></a> 
+	   <a id="avatar" class="group1" href="../20181101/images/p_03.png" title="CAT TAIPEI"><img src="../20181101/images/p_03.png" width="250" height="250" alt=""/></a> 
+	
+</div>
+</article>
+		
+<article id="contact" class="container">
+  <h2>CONTACT</h2>	
+  <div id="content"> 
+<form action="../20181101/send.php" method="post">
+	<div><label for="subject">Subject：</label><input type="text" name="subject" id="subject"></div>
+	<div><label for="name">Name：</label><input type="text" name="name" id="name"></div>
+	<div><label for="mail">E-mail：</label><input type="email" name="mail" id="mail"></div>
+	<div><label for="message">Message：</label><br><textarea name="message" id="message"></textarea></div>
+	<div class="btns"><input type="reset" id="rest" value="RESET"><input type="submit" value="DIANEにメールする" id="submit"></div>
+</form>
+	</div>
+</article>
+<footer>Copyright© DC 2018</footer>
+</body>
+	
+</html>
