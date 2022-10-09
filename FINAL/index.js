@@ -4187,7 +4187,7 @@ p.nominalBounds = new cjs.Rectangle(-111.3,-328.5,1158,1408.5);
 
 
 // stage content:
-(lib.index = function(mode,startPosition,loop) {
+(lib.RECOVER_index = function(mode,startPosition,loop) {
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
